@@ -1,19 +1,28 @@
 #include <stdio.h>
+
 int main() {
-    // Integer data type
-    int age = 25;
+    int age;
+    float height;
+    double weight;
+    char grade;
+    char name[50];
 
-    // Floating-point data types
-    float height = 5.9f;
-    double weight = 70.5;
+    printf("Enter your age (int): ");
+    scanf("%d", &age);
 
-    // Character data type
-    char grade = 'A';
+    printf("Enter your height in feet (float): ");
+    scanf("%f", &height);
 
-    // String (array of characters)
-    char name[20] = "Alice";
+    printf("Enter your weight in kg (double): ");
+    scanf("%lf", &weight);
 
-    // Displaying the values
+    printf("Enter your grade (char): ");
+    scanf(" %c", &grade);
+
+    printf("Enter your name (string): ");
+    scanf("%s", name);
+
+    printf("\n--- Input Summary ---\n");
     printf("Age (int): %d\n", age);
     printf("Height (float): %.1f\n", height);
     printf("Weight (double): %.2f\n", weight);
