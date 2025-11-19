@@ -1,33 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int age;
-    float height;
-    double weight;
-    char grade;
-    char name[50];
+    // Displaying size of basic data types
+    printf("Size of char: %zu bytes\n", sizeof(char));
+    printf("Size of short: %zu bytes\n", sizeof(short));
+    printf("Size of int: %zu bytes\n", sizeof(int));
+    printf("Size of long: %zu bytes\n", sizeof(long));
+    printf("Size of long long: %zu bytes\n", sizeof(long long));
 
-    printf("Enter your age (int): ");
-    scanf("%d", &age);
+    printf("Size of float: %zu bytes\n", sizeof(float));
+    printf("Size of double: %zu bytes\n", sizeof(double));
+    printf("Size of long double: %zu bytes\n", sizeof(long double));
 
-    printf("Enter your height in feet (float): ");
-    scanf("%f", &height);
+    // Pointer sizes (depends on architecture)
+    printf("Size of char*: %zu bytes\n", sizeof(char*));
+    printf("Size of int*: %zu bytes\n", sizeof(int*));
 
-    printf("Enter your weight in kg (double): ");
-    scanf("%lf", &weight);
-
-    printf("Enter your grade (char): ");
-    scanf(" %c", &grade);
-
-    printf("Enter your name (string): ");
-    scanf("%s", name);
-
-    printf("\n--- Input Summary ---\n");
-    printf("Age (int): %d\n", age);
-    printf("Height (float): %.1f\n", height);
-    printf("Weight (double): %.2f\n", weight);
-    printf("Grade (char): %c\n", grade);
-    printf("Name (string): %s\n", name);
+    // Array size (example: array of 10 ints)
+    int arr[10];
+    printf("Size of int arr[10]: %zu bytes (10 * sizeof(int))\n", sizeof(arr));
 
     return 0;
 }
